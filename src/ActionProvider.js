@@ -49,7 +49,9 @@ class ActionProvider {
       const greetingMessage = this.createChatBotMessage(resultado);
       this.updateChatbotState(greetingMessage);
     } catch (error) {
-      const greetingMessage = this.createChatBotMessage("vacio");
+      const greetingMessage = this.createChatBotMessage(
+        "No comprendo tu pregunta. Mirá los links de interés"
+      );
       this.updateChatbotState(greetingMessage);
     }
   } //fin funcion
