@@ -18,7 +18,8 @@ class ActionProvider {
       notas: "se forma",
       coordinadora:
         "la coordinación es la que se encarga de todos los asuntos administrativos de los alumnos de Física",
-      mail: "El mail es"
+      mail: "El mail es",
+      cursos: "tenés que ver el link"
     };
     const traits = {
       no: "por mail",
@@ -42,7 +43,8 @@ class ActionProvider {
       fecha_final:
         "que tengas en cuenta que son tres fechas de final. Consultá la página de cátedra",
       coordinacion: "En Física I la coordinadora es Ema Aveleyra",
-      mail_f1: "fisica1fiuba@gmail.com"
+      mail_f1: "fisica1fiuba@gmail.com",
+      link_cursos: "https://campus.fi.uba.ar/mod/page/view.php?id=96093"
     };
     try {
       var keys = [];
