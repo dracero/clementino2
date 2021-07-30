@@ -15,7 +15,9 @@ class ActionProvider {
       examenes: "Tanto la constancia de parcial como la de integrador",
       aula_virtual: "En todos los casos el aula virtual",
       preguntas: "Es necesario",
-      notas: "se forma"
+      notas: "se forma",
+      coordinadora:
+        "la coordinación es la que se encarga de todos los asuntos administrativos de los alumnos de Física"
     };
     const traits = {
       no: "por mail",
@@ -37,7 +39,8 @@ class ActionProvider {
         "promediando la de cursada con la del integrador, esta última tiene más peso.",
       pagina_catedra: "que veas la página de cátedra, ahí está la información",
       fecha_final:
-        "que tengas en cuenta que son tres fechas de final. Consultá la página de cátedra"
+        "que tengas en cuenta que son tres fechas de final. Consultá la página de cátedra",
+      coordinación: "En Física I la coordinadora es Ema Aveleyra"
     };
     try {
       var keys = [];
