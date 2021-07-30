@@ -17,7 +17,8 @@ class ActionProvider {
       preguntas: "Es necesario",
       notas: "se forma",
       coordinadora:
-        "la coordinación es la que se encarga de todos los asuntos administrativos de los alumnos de Física"
+        "la coordinación es la que se encarga de todos los asuntos administrativos de los alumnos de Física",
+      mail: "El mail es"
     };
     const traits = {
       no: "por mail",
@@ -40,7 +41,8 @@ class ActionProvider {
       pagina_catedra: "que veas la página de cátedra, ahí está la información",
       fecha_final:
         "que tengas en cuenta que son tres fechas de final. Consultá la página de cátedra",
-      coordinación: "En Física I la coordinadora es Ema Aveleyra"
+      coordinación: "En Física I la coordinadora es Ema Aveleyra",
+      mail_f1: "fisica1fiuba@gmail.com"
     };
     try {
       var keys = [];
