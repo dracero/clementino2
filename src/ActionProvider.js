@@ -41,7 +41,7 @@ class ActionProvider {
       pagina_catedra: "que veas la página de cátedra, ahí está la información",
       fecha_final:
         "que tengas en cuenta que son tres fechas de final. Consultá la página de cátedra",
-      coordinación: "En Física I la coordinadora es Ema Aveleyra",
+      coordinacion: "En Física I la coordinadora es Ema Aveleyra",
       mail_f1: "fisica1fiuba@gmail.com"
     };
     try {
