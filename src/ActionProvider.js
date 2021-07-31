@@ -19,7 +19,8 @@ class ActionProvider {
       coordinadora:
         "la coordinación se encarga de la gestión de la asignatura.",
       mail: "El mail es",
-      cursos: "tenés que ver el link"
+      cursos: "tenés que ver el link",
+      sp: "Si sos recursantes"
     };
     const traits = {
       no: "por mail",
@@ -44,7 +45,8 @@ class ActionProvider {
         "que tengas en cuenta que son tres fechas de final. Consultá la página de cátedra",
       coordinacion: "En Física I la coordinadora es Ema Aveleyra",
       mail_f1: "fisica1fiuba@gmail.com",
-      link_cursos: "https://campus.fi.uba.ar/mod/page/view.php?id=96093"
+      link_cursos: "https://campus.fi.uba.ar/mod/page/view.php?id=96093",
+      recursantes: "podés inscribirte en los cursos SP"
     };
     try {
       var keys = [];
