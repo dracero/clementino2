@@ -17,7 +17,7 @@ class ActionProvider {
       preguntas: "Es necesario",
       notas: "se forma",
       coordinadora:
-        "la coordinación es la que se encarga de todos los asuntos administrativos de los alumnos de Física",
+        "la coordinación se encarga de la gestión de la asignatura.",
       mail: "El mail es",
       cursos: "tenés que ver el link"
     };
