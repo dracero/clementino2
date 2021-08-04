@@ -29,7 +29,7 @@ const config = {
     {
       widgetName: "learningOptions",
       widgetFunc: (props) => <LearningOptions {...props} />
-    },
+    }, //fin primer widget
     {
       widgetName: "javascriptLinks",
       widgetFunc: (props) => <LinkList {...props} />,
@@ -49,6 +49,19 @@ const config = {
             text: "Web de exámenes",
             url: "https://campus2.fi.uba.ar/",
             id: 3
+          }
+        ]
+      }
+    }, //fin sefundo widget
+    {
+      widgetName: "fisicalinks",
+      widgetFunc: (props) => <LinkList {...props} />,
+      props: {
+        options: [
+          {
+            text: "Página de Cátedra Física I",
+            url: "https://campus.fi.uba.ar/course/view.php?id=1366",
+            id: 1
           }
         ]
       }

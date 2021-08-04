@@ -57,6 +57,9 @@ class ActionProvider {
         intents[respuesta.intents[0].name] + " " + action + " " + entitie;
       const greetingMessage = this.createChatBotMessage(resultado);
       this.updateChatbotState(greetingMessage);
+      if (resultado.includes("página de cátedra")) {
+        this.handleLinks();
+      }
     } catch (error) {
       const greetingMessage = this.createChatBotMessage(
         "No comprendo tu pregunta. Mirá los links de interés"
@@ -72,6 +75,14 @@ class ActionProvider {
         widget: "javascriptLinks"
       }
     );
+
+    this.updateChatbotState(message);
+  };
+
+  handleLinks = () => {
+    const message = this.createChatBotMessage("Este es el link", {
+      widget: "fisicalinks"
+    });
 
     this.updateChatbotState(message);
   };
