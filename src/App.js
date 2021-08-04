@@ -6,7 +6,6 @@ import MessageParser from "./MessageParser";
 import config from "./config";
 
 function App() {
-  //prueba 
   return (
     <div className="App">
       <header className="App-header">
