@@ -5,7 +5,6 @@ class ActionProvider {
     this.setState = setStateFunc;
   }
   greet(respuesta) {
-    console.log(respuesta);
     const intents = {
       mensajes: "Ponerse en contacto",
       cambios: "Pagina de cátedra",
@@ -49,16 +48,27 @@ class ActionProvider {
       recursantes: "podés inscribirte en los cursos SP"
     };
     try {
+      var confint = respuesta.intents[0].confidence; //nivel del confianza del intent
+      var key = [];
+      for (var k in respuesta.entities) key.push(k);
+      var confent = respuesta.entities[k][0].confidence; //nivel de confianza del entity
       var keys = [];
-      for (var k in respuesta.entities) keys.push(k);
-      const entitie = entities[k.split(":")[1]];
-      const action = traits[respuesta.traits.mensaje_instant_neo[0].value];
-      const resultado =
-        intents[respuesta.intents[0].name] + " " + action + " " + entitie;
-      const greetingMessage = this.createChatBotMessage(resultado);
-      this.updateChatbotState(greetingMessage);
-      if (resultado.includes("página de cátedra")) {
-        this.handleLinks();
+      if (confint >= 0.6 && confent >= 0.6) {
+        for (var j in respuesta.entities) keys.push(j);
+        const entitie = entities[j.split(":")[1]];
+        const action = traits[respuesta.traits.mensaje_instant_neo[0].value];
+        const resultado =
+          intents[respuesta.intents[0].name] + " " + action + " " + entitie;
+        const greetingMessage = this.createChatBotMessage(resultado);
+        this.updateChatbotState(greetingMessage);
+        if (resultado.includes("página de cátedra")) {
+          this.handleLinks();
+        }
+      } else {
+        const greetingMessage = this.createChatBotMessage(
+          "No comprendo tu pregunta. Por favor reformulala"
+        );
+        this.updateChatbotState(greetingMessage);
       }
     } catch (error) {
       const greetingMessage = this.createChatBotMessage(
