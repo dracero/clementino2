@@ -23,7 +23,9 @@ class ActionProvider {
       informacion: "En la página de cátedra",
       recursante: "Sos recursante si ",
       inscripcion_final:
-        "Por una cuestión organizativa sólo podrás inscribirte en una fecha a la vez. "
+        "Por una cuestión organizativa sólo podrás inscribirte en una fecha a la vez. ",
+      examen_sinpresent:
+        "Si estás inscripto a un final y no venís no perdés una oportunidad."
     };
     const traits = {
       no: "por mail",
@@ -54,7 +56,10 @@ class ActionProvider {
       con_recursante:
         "rendiste tres veces final y no aprobaste o si se te venció la cursada",
       plazo_inscripcion:
-        "Luego de una hora del cierre de la inscripción a una fecha de examen, se habilitará la siguiente. Podés inscribirte en todas las fechas que quieras, siempre y cuando tengas oportunidades de final para rendir"
+        "Luego de una hora del cierre de la inscripción a una fecha de examen, se habilitará la siguiente. Podés inscribirte en todas las fechas que quieras, siempre y cuando tengas oportunidades de final para rendir",
+      rendir_examen:
+        "No podés concurrir a rendir final sin estar inscripto. Sin excepciones.",
+      desinc: "Podés desinscribirte hasta 24 horas antes. Es lo recomendado."
     };
     try {
       var confint = respuesta.intents[0].confidence; //nivel del confianza del intent

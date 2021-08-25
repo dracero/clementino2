@@ -64,9 +64,14 @@ const config = {
             id: 1
           },
           {
-            text:"Fechas de integradores",
-            url:"https://campus.fi.uba.ar/mod/page/view.php?id=96099",
+            text: "Fechas de integradores",
+            url: "https://campus.fi.uba.ar/mod/page/view.php?id=96099",
             id: 2
+          },
+          {
+            text: "Requisitos inscripción integradores",
+            url: "https://campus.fi.uba.ar/mod/page/view.php?id=96099",
+            id: 3
           }
         ]
       }
