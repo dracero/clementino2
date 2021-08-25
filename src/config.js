@@ -62,6 +62,11 @@ const config = {
             text: "Página de Cátedra Física I",
             url: "https://campus.fi.uba.ar/course/view.php?id=1366",
             id: 1
+          },
+          {
+            text:"Fechas de integradores",
+            url:"https://campus.fi.uba.ar/mod/page/view.php?id=96099",
+            id: 2
           }
         ]
       }

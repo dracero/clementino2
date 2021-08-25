@@ -20,7 +20,10 @@ class ActionProvider {
       mail: "El mail es",
       cursos: "tenés que ver el link",
       sp: "Si sos recursantes",
-      informacion: "En la página de cátedra"
+      informacion: "En la página de cátedra",
+      recursante: "Sos recursante si ",
+      inscripcion_final:
+        "Por una cuestión organizativa sólo podrás inscribirte en una fecha a la vez. "
     };
     const traits = {
       no: "por mail",
@@ -47,7 +50,11 @@ class ActionProvider {
       mail_f1: "fisica1fiuba@gmail.com",
       link_cursos: "https://campus.fi.uba.ar/mod/page/view.php?id=96093",
       recursantes: "podés inscribirte en los cursos SP",
-      informacion: "Hay información de la cursada y los finales"
+      informacion: "Hay información de la cursada y los finales",
+      con_recursante:
+        "rendiste tres veces final y no aprobaste o si se te venció la cursada",
+      plazo_inscripcion:
+        "Luego de una hora del cierre de la inscripción a una fecha de examen, se habilitará la siguiente. Podés inscribirte en todas las fechas que quieras, siempre y cuando tengas oportunidades de final para rendir"
     };
     try {
       var confint = respuesta.intents[0].confidence; //nivel del confianza del intent
