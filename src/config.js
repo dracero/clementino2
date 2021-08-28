@@ -75,6 +75,19 @@ const config = {
           }
         ]
       }
+    },
+    {
+      widgetName: "certlinks",
+      widgetFunc: (props) => <LinkList {...props} />,
+      props: {
+        options: [
+          {
+            text: "Liks certficados de examen",
+            url: "http://www.fi.uba.ar/es/node/770",
+            id: 1
+          }
+        ]
+      } 
     }
   ]
 };

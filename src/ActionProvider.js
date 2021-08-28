@@ -23,9 +23,10 @@ class ActionProvider {
       informacion: "En la página de cátedra",
       recursante: "Sos recursante si ",
       inscripcion_final:
-        "Por una cuestión organizativa sólo podrás inscribirte en una fecha a la vez. ",
+        "Por una cuestión organizativa sólo podrás inscribirte en una fecha a la vez.",
       examen_sinpresent:
-        "Si estás inscripto a un final y no venís no perdés una oportunidad."
+        "Si estás inscripto a un final y no venís no perdés una oportunidad.",
+      cert_exam: "Los certificados de examen se bajan del link de más abajo."
     };
     const traits = {
       no: "por mail",
@@ -59,7 +60,8 @@ class ActionProvider {
         "Luego de una hora del cierre de la inscripción a una fecha de examen, se habilitará la siguiente. Podés inscribirte en todas las fechas que quieras, siempre y cuando tengas oportunidades de final para rendir",
       rendir_examen:
         "No podés concurrir a rendir final sin estar inscripto. Sin excepciones.",
-      desinc: "Podés desinscribirte hasta 24 horas antes. Es lo recomendado."
+      desinc: "Podés desinscribirte hasta 24 horas antes. Es lo recomendado.",
+      en_el_link: "Es importante también que envíes un mensaje a los docentes"
     };
     try {
       var confint = respuesta.intents[0].confidence; //nivel del confianza del intent
@@ -77,6 +79,9 @@ class ActionProvider {
         this.updateChatbotState(greetingMessage);
         if (resultado.includes("página de cátedra")) {
           this.handleLinks();
+        }
+        if (resultado.includes("Los certificados de examen")) {
+          this.handleCerts();
         }
       } else {
         const greetingMessage = this.createChatBotMessage(
@@ -106,6 +111,14 @@ class ActionProvider {
   handleLinks = () => {
     const message = this.createChatBotMessage("Este es el link", {
       widget: "fisicalinks"
+    });
+
+    this.updateChatbotState(message);
+  };
+
+  handleCerts = () => {
+    const message = this.createChatBotMessage("Este es el link", {
+      widget: "certlinks"
     });
 
     this.updateChatbotState(message);
