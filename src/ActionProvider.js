@@ -26,7 +26,10 @@ class ActionProvider {
         "Por una cuestión organizativa sólo podrás inscribirte en una fecha a la vez.",
       examen_sinpresent:
         "Si estás inscripto a un final y no venís no perdés una oportunidad.",
-      cert_exam: "Los certificados de examen se bajan del link de más abajo."
+      cert_exam: "Los certificados de examen se bajan del link de más abajo.",
+      ver_siu: "Tenés que verificar tu historia académica en el SIU-Guaraní.",
+      insc_fisica:
+        "No es posible anotarse en ninguna materia del departamento fuera de término."
     };
     const traits = {
       no: "por mail",
@@ -61,7 +64,13 @@ class ActionProvider {
       rendir_examen:
         "No podés concurrir a rendir final sin estar inscripto. Sin excepciones.",
       desinc: "Podés desinscribirte hasta 24 horas antes. Es lo recomendado.",
-      en_el_link: "Es importante también que envíes un mensaje a los docentes"
+      en_el_link: "Es importante también que envíes un mensaje a los docentes",
+      detalles:
+        "Para más detalles ver las resoluciones correspondientes y el régimen de cursada vigente en www.fi.uba.ar ",
+      fuera_term:
+        "Los docentes y coordinadores no pueden inscribirte fuer de término tampoco.",
+      mails:
+        "Enviá un mail a Mesa de Ayuda (ayuda@fi.uba.ar) con copia a la casilla del Departamento de Física (fisica@fi.uba.ar). Recordá que solo de lunes a viernes antes de las 18."
     };
     try {
       var confint = respuesta.intents[0].confidence; //nivel del confianza del intent
