@@ -68,7 +68,7 @@ class ActionProvider {
       detalles:
         "Para más detalles ver las resoluciones correspondientes y el régimen de cursada vigente en www.fi.uba.ar ",
       fuera_term:
-        "Los docentes y coordinadores no pueden inscribirte fuer de término tampoco.",
+        "Los docentes y coordinadores no pueden inscribirte fuer de término tampoco. Pero si tenés la chance de inscribirte hacelo y si vas a cursar podés desinscribirte.",
       mails:
         "Enviá un mail a Mesa de Ayuda (ayuda@fi.uba.ar) con copia a la casilla del Departamento de Física (fisica@fi.uba.ar). Recordá que solo de lunes a viernes antes de las 18."
     };
