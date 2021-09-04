@@ -29,7 +29,9 @@ class ActionProvider {
       cert_exam: "Los certificados de examen se bajan del link de más abajo.",
       ver_siu: "Tenés que verificar tu historia académica en el SIU-Guaraní.",
       insc_fisica:
-        "No es posible anotarse en ninguna materia del departamento fuera de término."
+        "No es posible anotarse en ninguna materia del departamento fuera de término.",
+      anot_nocorrel:
+        "Al anotarte en una materia, si no te desinscribís durante el período de desinscripción indicado en la pregunta anterior, perderás la cursada vigente y las chances que te quedan."
     };
     const traits = {
       no: "por mail",
@@ -70,7 +72,8 @@ class ActionProvider {
       fuera_term:
         "Los docentes y coordinadores no pueden inscribirte fuer de término tampoco. Pero si tenés la chance de inscribirte hacelo y si vas a cursar podés desinscribirte.",
       mails:
-        "Enviá un mail a Mesa de Ayuda (ayuda@fi.uba.ar) con copia a la casilla del Departamento de Física (fisica@fi.uba.ar). Recordá que solo de lunes a viernes antes de las 18."
+        "Enviá un mail a Mesa de Ayuda (ayuda@fi.uba.ar) con copia a la casilla del Departamento de Física (fisica@fi.uba.ar). Recordá que solo de lunes a viernes antes de las 18.",
+      descripción: "Tenes que desinscribirte en el período habilitado."
     };
     try {
       var confint = respuesta.intents[0].confidence; //nivel del confianza del intent
