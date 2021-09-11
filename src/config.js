@@ -85,9 +85,14 @@ const config = {
             text: "Liks certficados de examen",
             url: "http://www.fi.uba.ar/es/node/770",
             id: 1
+          },
+          {
+            text: "Link a página del departamento",
+            url: "https://campus.fi.uba.ar/course/view.php?id=1007",
+            id: 2
           }
         ]
-      } 
+      }
     }
   ]
 };

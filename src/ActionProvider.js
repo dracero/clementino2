@@ -31,11 +31,15 @@ class ActionProvider {
       insc_fisica:
         "No es posible anotarse en ninguna materia del departamento fuera de término.",
       anot_nocorrel:
-        "Al anotarte en una materia, si no te desinscribís durante el período de desinscripción indicado en la pregunta anterior, perderás la cursada vigente y las chances que te quedan."
+        "Al anotarte en una materia, si no te desinscribís durante el período de desinscripción indicado en la pregunta anterior, perderás la cursada vigente y las chances que te quedan.",
+      hor_dep:
+        "Los horarios de las asginaturas están en la pagina del departamento.",
+      inscripcion:
+        "Te tenés que inscribir dentro del período habilitado a través del SIU."
     };
     const traits = {
-      no: "por mail",
-      si: "por teléfono",
+      no: "enviar un mail.",
+      si: "llamar por teléfono.",
       default: ""
     };
     const entities = {
@@ -70,10 +74,11 @@ class ActionProvider {
       detalles:
         "Para más detalles ver las resoluciones correspondientes y el régimen de cursada vigente en www.fi.uba.ar ",
       fuera_term:
-        "Los docentes y coordinadores no pueden inscribirte fuer de término tampoco. Pero si tenés la chance de inscribirte hacelo y si vas a cursar podés desinscribirte.",
+        "Los docentes y coordinadores no pueden inscribirte fuera de término. Si tenés la chance de inscribirte hacelo y si no vas a cursar podés desinscribirte.",
       mails:
         "Enviá un mail a Mesa de Ayuda (ayuda@fi.uba.ar) con copia a la casilla del Departamento de Física (fisica@fi.uba.ar). Recordá que solo de lunes a viernes antes de las 18.",
-      descripción: "Tenes que desinscribirte en el período habilitado."
+      desinscripcion: "Tenes que desinscribirte en el período habilitado.",
+      pag_dep: "Está en el siguiente link:"
     };
     try {
       var confint = respuesta.intents[0].confidence; //nivel del confianza del intent
@@ -92,7 +97,10 @@ class ActionProvider {
         if (resultado.includes("página de cátedra")) {
           this.handleLinks();
         }
-        if (resultado.includes("Los certificados de examen")) {
+        if (
+          resultado.includes("Los certificados de examen") ||
+          resultado.includes("Los horarios de las asginaturas")
+        ) {
           this.handleCerts();
         }
       } else {
