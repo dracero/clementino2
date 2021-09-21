@@ -85,10 +85,14 @@ class ActionProvider {
       var key = [];
       for (var k in respuesta.entities) key.push(k);
       var confent = respuesta.entities[k][0].confidence; //nivel de confianza del entity
+      console.log(entities);
       var keys = [];
       if (confint >= 0.6 && confent >= 0.6) {
         for (var j in respuesta.entities) keys.push(j);
-        const entitie = entities[j.split(":")[1]];
+        let entitie = entities[j.split(":")[1]];
+        if (entitie === undefined) {
+          entitie = entities[j.split(":")[0]];
+        }
         const action = traits[respuesta.traits.mensaje_instant_neo[0].value];
         const resultado =
           intents[respuesta.intents[0].name] + " " + action + " " + entitie;
