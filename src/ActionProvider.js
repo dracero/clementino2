@@ -38,8 +38,8 @@ class ActionProvider {
         "Te tenés que inscribir dentro del período habilitado a través del SIU."
     };
     const traits = {
-      no: "enviar un mail.",
-      si: "llamar por teléfono.",
+      no: "Enviar un mail.",
+      si: "Llamar por teléfono.",
       default: ""
     };
     const entities = {
@@ -49,9 +49,9 @@ class ActionProvider {
       Descargas: "se descarga de la página de cátedra",
       especifcar_examen:
         "que me especifiques el tipo de exámen, parcial o integrador",
-      Mensaje_Coordinaci_n: "con la coordinación de la materia",
-      mensaje_departamento: "con el departamento de la materia",
-      mensaje_docentes: "a los docentes de tu cátedra",
+      Mensaje_Coordinaci_n: "con la coordinación de la materia.",
+      mensaje_departamento: "con el departamento de la materia.",
+      mensaje_docentes: "a los docentes de tu cátedra.",
       nota_cursada: "con las notas de parciales, TP y otras actividades.",
       nota_actas:
         "promediando la de cursada con la del integrador, esta última tiene más peso.",
@@ -95,7 +95,7 @@ class ActionProvider {
         }
         const action = traits[respuesta.traits.mensaje_instant_neo[0].value];
         const resultado =
-          intents[respuesta.intents[0].name] + " " + action + " " + entitie;
+          intents[respuesta.intents[0].name] + " " + entitie + " " + action;
         const greetingMessage = this.createChatBotMessage(resultado);
         this.updateChatbotState(greetingMessage);
         if (resultado.includes("página de cátedra")) {
